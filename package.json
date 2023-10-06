@@ -1,6 +1,6 @@
 {
   "name": "sanity-oxygen-utils",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Preview and dataset utilities for working with Sanity and Oxygen",
   "main": "dist/",
   "scripts": {

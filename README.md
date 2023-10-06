@@ -5,9 +5,9 @@ Easily set up preview and dataset swap functionalities on your frontend for deve
 ## Installation
 
 1. Set up `sanity-remix-utils` in your `root.jsx` file:
-   a. Import the `getRootLoaderKeys` and `PreviewProvider` components
-   b. Add the `getRootLoaderKeys` to your `loader` function
-   c. Wrap your `Root` return with the `PreviewProvider` component
+1. Import the `getRootLoaderKeys` and `PreviewProvider` components
+1. Add the `getRootLoaderKeys` to your `loader` function
+1. Wrap your `Root` return with the `PreviewProvider` component
 
 ```jsx
 // app/root.jsx
