@@ -4,10 +4,11 @@ Easily set up preview and dataset swap functionalities on your frontend for deve
 
 ## Installation
 
-1. Set up `sanity-remix-utils` in your `root.jsx` file:
+### Set up `sanity-remix-utils` in your `root.jsx`
+
 1. Import the `getRootLoaderKeys` and `PreviewProvider` components
-1. Add the `getRootLoaderKeys` to your `loader` function
-1. Wrap your `Root` return with the `PreviewProvider` component
+2. Add the `getRootLoaderKeys` to your `loader` function
+3. Wrap your `Root` return with the `PreviewProvider` component
 
 ```jsx
 // app/root.jsx
@@ -42,7 +43,7 @@ export function Root({ app }) {
 }
 ```
 
-2. Create the endpoint required to manage the preview and dataset swap in your `api` folder:
+### Create the endpoint required to manage the preview and dataset swap in your `api` folder:
 
 ```js
 // app/routes/*/api/dataset.js
