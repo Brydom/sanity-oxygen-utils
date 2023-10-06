@@ -1,6 +1,6 @@
 {
   "name": "sanity-oxygen-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Preview and dataset utilities for working with Sanity and Oxygen",
   "main": "dist/",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Brydom/shopify-graphql-bulk-throttler.git"
+    "url": "git+https://github.com/Brydom/sanity-oxygen-utils.git"
   },
   "keywords": [
     "sanity",
@@ -27,9 +27,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Brydom/shopify-graphql-bulk-throttler/issues"
+    "url": "https://github.com/Brydom/sanity-oxygen-utils/issues"
   },
-  "homepage": "https://github.com/Brydom/shopify-graphql-bulk-throttler#readme",
+  "homepage": "https://github.com/Brydom/sanity-oxygen-utils#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-react": "^7.22.15",
