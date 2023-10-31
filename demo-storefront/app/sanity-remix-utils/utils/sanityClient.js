@@ -1,4 +1,4 @@
-import { createClient } from "@sanity/client";
+import {createClient} from '@sanity/client';
 
 let sanityClientSingleton;
 
@@ -9,10 +9,10 @@ let sanityClientSingleton;
  * @param {string} [options.apiVersion="2023-05-26"] - The version of the Sanity API to use.
  * @returns {Object} - The singleton instance of the Sanity client.
  */
-export default function sanityClient({ context, apiVersion = "2023-05-26" }) {
+export default function sanityClient(context, apiVersion = '2023-05-26') {
   const dataset =
-    context.env.ALLOW_DATASET_SWAP === "true"
-      ? context.session.session.get("dataset") || context.env.SANITY_DATASET
+    context.env.ALLOW_DATASET_SWAP === 'true'
+      ? context.session.get('dataset') || context.env.SANITY_DATASET
       : context.env.SANITY_DATASET;
 
   if (!sanityClientSingleton) {
@@ -20,13 +20,13 @@ export default function sanityClient({ context, apiVersion = "2023-05-26" }) {
       projectId: context.env.SANITY_PROJECT_ID,
       dataset,
       apiVersion,
-      useCdn: context.env.NODE_ENV === "production",
+      useCdn: context.env.NODE_ENV === 'production',
       token: context.env.SANITY_TOKEN,
     });
   }
 
   if (sanityClientSingleton.config().dataset !== dataset) {
-    sanityClientSingleton.config({ dataset });
+    sanityClientSingleton.config({dataset});
   }
 
   return sanityClientSingleton;

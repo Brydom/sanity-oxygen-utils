@@ -4,7 +4,7 @@ Easily set up preview and dataset swap functionalities on your frontend for deve
 
 ## Installation
 
-### Set up `sanity-remix-utils` in your `root.jsx`
+### Set up `sanity-oxygen-utils` in your `root.jsx`
 
 1. Import the `getRootLoaderKeys` and `PreviewProvider` components
 2. Add the `getRootLoaderKeys` to your `loader` function
@@ -13,7 +13,7 @@ Easily set up preview and dataset swap functionalities on your frontend for deve
 ```jsx
 // app/root.jsx
 
-import { getRootLoaderKeys, PreviewProvider } from 'sanity-remix-utils';
+import { getRootLoaderKeys, PreviewProvider } from 'sanity-oxygen-utils';
 
 ...
 
@@ -21,8 +21,8 @@ export function loader({ context }) {
   ...
 
   return {
-    ...
-    ...getRootLoaderKeys({ context }),
+    myData,
+    ...(await getRootLoaderKeys(context)),
   }
 }
 
@@ -34,30 +34,42 @@ export function Root({ app }) {
   )
 
   return (
-    <PreviewProvider>
-      <...OtherProviders>
-        <Outlet />
-      </...OtherProviders>
+    <PreviewProvider
+      datasets={[
+        {
+          label: 'development',
+          value: 'development',
+        },
+        {
+          label: 'production',
+          value: 'production',
+        },
+      ]}
+    >
+      <Outlet />
+      ...other
     </PreviewProvider>
   )
 }
 ```
 
-### Create the endpoint required to manage the preview and dataset swap in your `api` folder:
+### Create the endpoint required to manage the preview and dataset swap at /api/sanity-remix-utils
 
 ```js
-// app/routes/*/api/dataset.js
-import { createApiRoute } from "sanity-remix-utils";
+// app/routes/*/api.sanity-remix-utils.js
+import { createApiRoute } from "../../src";
 
-export default createApiRoute();
+export function action({ request, context }) {
+  return createApiRoute({ request, context });
+}
 ```
 
 ## Usage
 
-1. When fetching Sanity content in your loaders, make sure to use the `sanityClient` from `sanity-remix-utils` and the `useLiveQuery` hook:
+1. When fetching Sanity content in your loaders, make sure to use the `sanityClient` from `sanity-oxygen-utils` and the `useLiveQuery` hook:
 
 ```js
-import { sanityClient } from 'sanity-remix-utils';
+import { sanityClient } from 'sanity-oxygen-utils';
 import { useLoaderData } from '@remix-run/react';
 
 const SANITY_QUERY = `*[id]`;
