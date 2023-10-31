@@ -53,10 +53,10 @@ export function Root({ app }) {
 }
 ```
 
-### Create the endpoint required to manage the preview and dataset swap at /api/sanity-remix-utils
+### Create the endpoint required to manage the preview and dataset swap at /api/sanity-oxygen-utils
 
 ```js
-// app/routes/*/api.sanity-remix-utils.js
+// app/routes/*/api.sanity-oxygen-utils.js
 import { createApiRoute } from "../../src";
 
 export function action({ request, context }) {

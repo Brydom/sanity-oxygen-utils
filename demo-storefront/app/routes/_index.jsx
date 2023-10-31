@@ -1,4 +1,4 @@
-import {sanityClient} from '../sanity-remix-utils';
+import {sanityClient} from '../sanity-oxygen-utils';
 import {useLoaderData} from '@remix-run/react';
 import {useLiveQuery} from '@sanity/preview-kit';
 

@@ -15,7 +15,7 @@ import {
 import favicon from '../public/favicon.svg';
 import resetStyles from './styles/reset.css';
 import appStyles from './styles/app.css';
-import {getRootLoaderKeys, PreviewProvider} from './sanity-remix-utils';
+import {getRootLoaderKeys, PreviewProvider} from './sanity-oxygen-utils';
 
 // This is important to avoid re-fetching root queries on sub-navigations
 export const shouldRevalidate = ({formMethod, currentUrl, nextUrl}) => {

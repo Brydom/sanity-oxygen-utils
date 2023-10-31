@@ -33,7 +33,7 @@ export async function getRootLoaderKeys(context) {
 }
 
 /**
- * Handles dataset and preview changes. Set this route up at `/api/sanity-remix-utils`.
+ * Handles dataset and preview changes. Set this route up at `/api/sanity-oxygen-utils`.
  * @param {Object} options - The options object.
  * @param {Object} options.request - The request object.
  * @param {Object} options.context - The context object.

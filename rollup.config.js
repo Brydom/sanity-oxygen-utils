@@ -2,7 +2,7 @@ import { terser } from "rollup-plugin-terser";
 import babel from "rollup-plugin-babel";
 
 export default {
-  input: "demo-storefront/app/sanity-remix-utils/index.js",
+  input: "demo-storefront/app/sanity-oxygen-utils/index.js",
   output: {
     file: "dist/index.js",
     format: "cjs",

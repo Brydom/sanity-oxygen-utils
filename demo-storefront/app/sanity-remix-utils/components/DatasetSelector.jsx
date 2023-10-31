@@ -23,14 +23,14 @@ function DatasetSelectorInner({datasets}) {
     const newDataset = e.target.value;
     fetcher.submit(
       {action: 'dataset', dataset: newDataset},
-      {method: 'POST', action: '/api/sanity-remix-utils'},
+      {method: 'POST', action: '/api/sanity-oxygen-utils'},
     );
   };
 
   const handlePreviewUpdate = async () => {
     fetcher.submit(
       {action: 'preview', preview: !PREVIEW},
-      {method: 'POST', action: '/api/sanity-remix-utils'},
+      {method: 'POST', action: '/api/sanity-oxygen-utils'},
     );
   };
 
